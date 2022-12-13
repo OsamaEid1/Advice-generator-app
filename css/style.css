@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+body{
+    margin: 0;
+    font-family:'Manrope', sans-serif;
+    background-color: var(--Dark-Blue);
+}
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: lightslategray
+}
+/* Start Advice  */
+#advice{
+    height: calc(100vh - 15.2px);
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#advice .advice-holder{
+    max-width: 500px;
+    background-color: var(--Dark-Grayish-Blue);
+    color: var(--Light-Cyan);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 7px 20px #00000069;
+}
+.advice-holder h6{
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+q{
+    display: block;
+    font-size: 28px;
+    padding-bottom: 40px;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--Grayish-Blue);
+    margin-bottom: 30px;
+    position: relative;
+}
+.ribbons{
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.ribbons::before,
+.ribbons::after{
+    content: "";
+    width: 5px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: var(--Light-Cyan);
+}
+.advice-holder img{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: -55px;
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    box-shadow: 3px 3px 11px 0px black;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+.advice-holder img:hover{
+    box-shadow:  0px 2px 21px 0px var(--Neon-Green);
+    transform: rotate(360deg);
+}
+.err-msg{
+    color: FIREBRICK;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: 0;
+    max-width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
+/* End Advice  */
